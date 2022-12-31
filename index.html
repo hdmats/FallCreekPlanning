@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!--Henry Matsen-->
+<!--IS 120 My First Webpage-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A landing page for Fall Creek Planning LLC">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css">
+  <!--favicons-->
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>Fall Creek Planning</title>
+</head>
+<!--Learn OG!!!!!!!!-->
+
+<body>
+  <div class="hero">
+    <div class="header-wrapper">
+      <header>
+        <nav>
+          <div class="menu-icon">
+            <div>
+            </div>
+          </div>
+          <ul class="main-menu">
+            <li><a href="about/" class="active">about</a></li>
+            <li><a class="homebutton">home</a></li>
+            <li><a href="form/" class="active">form</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <picture>
+      <source srcset="images/hero_1600w.jpg" media="(min-width: 901px)">
+      <source srcset="images/hero_900w.jpg" media="(min-width: 501px)">
+      <source srcset="images/hero_500w.jpg" media="(max-width: 500px)">
+
+      <img class="fall" src="images/hero_900w.jpg" alt="Fall Creek Road">
+    </picture>
+    <img src="images/Logo_Main_Cloud_FallCreek.png" class="logo">
+  </div>
+  <section>
+    <div class="est">
+      <h2> Bozeman, Montana</h2>
+      <h3> EST 2022</h3>
+    </div>
+    <div class="modal" id="modal">
+      <div class="content">
+        <h2>Projects</h2>
+        <div class="modalcards">
+          <div class="modalcard">
+            <a>
+              <div class="img-wrapper">
+                <img src="images/project-example1.jpg" alt="project 1 placeholder">
+              </div>
+              <div class="title-wrap">
+                <p>Project 1</p>
+              </div>
+              <div class="text"></div>
+            </a>
+          </div>
+          <div class="modalcard">
+            <a>
+              <div class="img-wrapper">
+                <img src="images/project-example2.jpg" alt="project 2 placeholder">
+              </div>
+              <div class="title-wrap">
+                <p>Project 2</p>
+              </div>
+              <div class="text"></div>
+            </a>
+          </div>
+          <div class="modalcard">
+            <a>
+              <div class="img-wrapper">
+                <img src="images/project-example3.jpg" alt="project 3 placeholder">
+              </div>
+              <div class="title-wrap">
+                <p>Project 3</p>
+              </div>
+              <div class="text"></div>
+            </a>
+          </div>
+          <div class="modalcard">
+            <a>
+              <div class="img-wrapper">
+                <img src="images/project-example4.jpg" alt="project 4 placeholder">
+              </div>
+              <div class="title-wrap">
+                <p>Project 4</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <svg class="close-icon" viewBox="0 0 60 60" onclick="closeModal();">
+        <line x1="5%" y1="5%" x2="95%" y2="95%" />
+        <line x1="5%" y1="95%" x2="95%" y2="5%" />
+      </svg>
+    </div>
+    <!--About Section-->
+    <article class="about">
+      <div class="text">
+        <h4>What We Do</h4>
+
+        <p>
+          Marty’s experience in local government, specifically at the Director level means he understands the politics,
+          processes, regulations and personalities that can affect and
+          ultimately determine project entitlement. While each community has its own zoning, subdivision, design, and
+          development regulations many commonalities exist. The key is
+          knowing how the pieces work together, or against each other. Marty knows how to put the puzzle pieces
+          together.
+        </p>
+      </div>
+      <div class="img"> <img src="images/bunch-blueprints.jpg" alt="layed out blueprints"></div>
+    </article>
+
+    <!--FAQS Section-->
+  </section>
+  <aside class="faqs-title">
+    HOW WE CAN HELP
+  </aside>
+  <main>
+    <article class="faqs">
+      <div>
+        <h5>Do you own a piece of land or want to purchase a piece of land for development?</h5>
+        <p>We can help you understand what you can develop on that piece of land, by right.</p>
+      </div>
+      <div>
+        <h5>Do you want to do something different on a piece of land than what is currently allowed?</h5>
+        <p>We can help you understand the processes and regulations that will get you where you want to go.</p>
+      </div>
+      <div>
+        <h5>Do you need to put together a team?</h5>
+        <p>We can help you find the Engineers, Designers, Architects you will need for a successful application.</p>
+      </div>
+      <div>
+        <h5>Do you have a team or is your project stuck in process purgatory?</h5>
+        <p>We can help with the understanding and communication that will get things moving again.</p>
+      </div>
+      <div>
+        <h5>Do you have a project that needs some extra outreach or community communication?</h5>
+        <p>We can help with those conversations and facilitate community meetings. </p>
+      </div>
+    </article>
+  </main>
+  <div class="cards">
+    <div class="card">
+      <a>
+        <div class="img-wrapper">
+          <img src="images/resources.jpg" alt="paper with graph">
+        </div>
+        <div class="title-wrap">
+          <p>Resources</p>
+        </div>
+        <div class="desc-wrap">
+          <p>click here for more resources</p>
+        </div>
+        <div class="text"></div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="https://www.schedulicity.com/scheduling/FCP6ZCQ" target="_blank">
+        <div class="img-wrapper">
+          <img src="images/schedule.jpg" alt="calendar">
+        </div>
+        <div class="title-wrap">
+          <p>Schedule</p>
+        </div>
+        <div class="desc-wrap">
+          <p>schedule a meeting time</p>
+        </div>
+        <div class="text"></div>
+      </a>
+    </div>
+  </div>
+  <div class="svg">
+    <img src="images/Icon_Main_Moss_FallCreek.png" alt="road leading to mountians SVG" />
+  </div>
+  <footer>
+    <p>Copyright &copy; 2021 Fall Creek Planning ('22) - All Rights Reserved.</p>
+  </footer>
+  <script>
+    document.querySelector("nav").addEventListener("click", function () {
+      this.classList.toggle("close");
+    });
+
+    function modal() {
+      document.getElementById("modal").style.display = "flex"
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none"
+    }
+  </script>
+</body>
+
+</html>

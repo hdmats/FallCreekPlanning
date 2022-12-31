@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Form page">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--favicons-->
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="shortcut icon" href="../favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="../browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+    <title>Form</title>
+</head>
+<body class="test">
+    <div class="hero">
+        <div class="header-wrapper">
+            <header>
+                <nav class="formnav">
+                    <div class="formnave menu-icon">
+                        <div>  
+                        </div>
+                    </div>
+                    <ul class="main-menu">
+                        <li><a href="../about/" class="active">about</a></li>
+                        <li><a href="../" class="active">home</a></li>
+                        <li><a href="">form</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+    </div> 
+    <main class="formMain">
+        <h1>Contact Us</h1>
+        <section class="form">
+            <div class="picture">
+                <img src="../images/Icon_Main_Moss_FallCreek.png" alt="fall creek planning icon">
+            </div>
+            <div class="input">
+            <form action="https://formsubmit.co/ad3db628eb538850e39b87634d33dc49" method="POST">
+              
+            <label for="name">Full name</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="company">Company name</label>
+            <input type="text" name="company" id="company" required>
+          
+            <label for="email">Email address</label>
+            <input type="email" name="email" id="email" required>
+          
+            <label for="phone">Phone number</label>
+            <input type="tel" name="phone" id="phone">
+
+            <label for="message">Message</label>
+            <textarea name="message" id="message" rows="10" placeholder="add text here"></textarea>
+            
+            <label for="toggle">Are you a New Client</label>
+            <div class="toggle">
+                <input id="toggle" class="toggle-checkbox" type="checkbox"/>
+                <label for="toggle" class="toggle-label">
+                    <span class="toggle-inner"></span>
+                    <span class="toggle-switch"></span>
+                </label>
+            </div>
+
+            <input type="text" id="newClient" value="No" style="display:none">
+
+            <label for="referral" id="referral-label" class="referral"> Were you referred? </label>
+            <input type="text" name="referral" id="referral"  class="referral" placeholder="Referrer Name (optional)">
+
+            <input type="hidden" id="subject" name="_subject" value="">
+            <input type="hidden" name="_template" value="box">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" id="replyto" name="_replyto" value="">
+
+            <div></div>
+            <div onmouseover="subject();">
+            <button type="submit" class="btn">Submit</button>
+            </div>
+            
+
+            </form>
+            </div>
+        </section>
+    </main>
+     <footer>
+      <p>Copyright &copy; 2021 Fall Creek Planning ('22) - All Rights Reserved.</p>
+    </footer>
+    <script>
+        function subject()
+        {
+            if (document.getElementById("toggle").checked)
+            {
+                document.getElementById("newClient").value = "Yes";
+                document.getElementById("subject").value = "New Client! " + document.getElementById("name").value;
+            }
+            else
+            {
+                document.getElementById("subject").value = "New message from " + document.getElementById("name").value;
+            }
+            document.getElementById("replyto").value = document.getElementById("email").value;
+        };
+
+        document.querySelector("nav").addEventListener("click", function () {
+            this.classList.toggle("close");
+          });
+        let label = document.getElementById("referral-label");
+        document.querySelector("[type='checkbox'").addEventListener("click", function () {
+            referral.classList.toggle("open");
+            label.classList.toggle("open");
+          });
+    </script>
+</body>
+</html>
